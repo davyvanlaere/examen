@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Nooj3NYW2RaMKsH+sDHseoHgJ8ALjOsGaJs79FKaSr6QUVoSHpbRosYnud2Tsi9VfdGeA5VtV64qj1/9zVgDdQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DLE\\source\\repos\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DLE\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
