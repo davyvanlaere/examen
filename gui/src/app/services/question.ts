@@ -10,4 +10,6 @@ export interface QuestionInfo {
     SuppliedAnswer?: string;
     Result?: boolean;
     Answers: Answer[];
+    TotalRemaining?: number;
+    Total?: number;
 }

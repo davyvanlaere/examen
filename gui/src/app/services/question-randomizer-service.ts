@@ -19,10 +19,11 @@ export class QuestionRandomizerService {
         this.SaveRemainingListToStorage(selectionList);
 
         let item = this.allQuestions.find(i => i.Id == questionId);
-        if (!item) {
-            debugger;
-        }
-        return item;
+        let copy: QuestionInfo = JSON.parse(JSON.stringify(item));
+        copy.Total = this.allQuestions.length;
+        copy.TotalRemaining = selectionList.length;
+
+        return copy;
     }
 
     private SaveRemainingListToStorage(selectionList: number[]) {
