@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DLE\\source\\repos\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj": {}
+    "C:\\Git\\examen\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DLE\\source\\repos\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj": {
+    "C:\\Git\\examen\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DLE\\source\\repos\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj",
+        "projectUniqueName": "C:\\Git\\examen\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj",
         "projectName": "VragenLijstJson",
-        "projectPath": "C:\\Users\\DLE\\source\\repos\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj",
+        "projectPath": "C:\\Git\\examen\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj",
         "packagesPath": "C:\\Users\\DLE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DLE\\source\\repos\\VragenLijstJson\\VragenLijstJson\\obj\\",
+        "outputPath": "C:\\Git\\examen\\VragenLijstJson\\VragenLijstJson\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
