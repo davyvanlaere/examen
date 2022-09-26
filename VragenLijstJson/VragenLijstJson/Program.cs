@@ -11,9 +11,10 @@ namespace VragenLijstJson
     class Program
     {
         // vragenlijst.pdf -> ctrl+a -> ctrl+v + beetje opkuis (titles per page wegnemen)
-        private static Regex _questionRegex = new Regex(@"(?<id>[0-9]{1}\.){1}(?<title>.+)", RegexOptions.Compiled);
-        private static Regex _answerRegex = new Regex(@"^. ((?<id>[abcABC]{1})\.){1}(?<title>.+)", RegexOptions.Compiled);
+        private static Regex _questionRegex = new Regex(@"^(?<id>[0-9]*\.){1}(?<title>.+)", RegexOptions.Compiled);
+        private static Regex _answerRegex = new Regex(@"^((?<id>[abcABC]{1})\.){1}(?<title>.+)", RegexOptions.Compiled);
         private static Regex _pageTitleRegex = new Regex(@"[0-9]+Vragenlijst \(voorlopige\) sportschutterslicentie", RegexOptions.Compiled);
+        private static Regex _justANumberRegex = new Regex(@"^[0-9]*$", RegexOptions.Compiled);
 
         private static Regex[] _regexes = new Regex[] {
             _questionRegex,
@@ -37,24 +38,24 @@ namespace VragenLijstJson
 
         private static Dictionary<int, string> GetSolutions()
         {
-            var solutionLines = File.ReadAllLines(@"antwoorden.txt")
+            var solutionLines = File.ReadAllLines(@"antwoorden2022.txt")
                 .Where(l => !string.IsNullOrWhiteSpace(l))
                 .ToArray();
 
-            var solutions = new Dictionary<int, string>();
-            for (var idx = 0; idx < solutionLines.Length; idx = idx + 2)
-            {
-                solutions.Add(Convert.ToInt32(solutionLines[idx]), solutionLines[idx + 1].Trim());
-            }
+            var solutionRegex = new Regex("(?<id>[0-9]*) - (?<answer>[A-C]{1})", RegexOptions.Compiled);
 
-            return solutions;
+            return solutionLines
+                .SelectMany(line => solutionRegex.Matches(line))
+                .ToDictionary(k => Convert.ToInt32(k.Groups["id"].Value), k => k.Groups["answer"].Value);
         }
 
         private static List<QuestionInfo> ReadQuestionsAndAnswers()
         {
-            var lines = File.ReadAllLines(@"vragenlijst.txt")
+            var lines = File.ReadAllLines(@"vragenlijst2022.txt")
+                .Select(s => s.Trim())
                 .Where(l => !string.IsNullOrWhiteSpace(l))
-                .Where(l => !_pageTitleRegex.IsMatch(l)).ToArray();
+                .Where(l => !_pageTitleRegex.IsMatch(l))
+                .Where(l => !_justANumberRegex.IsMatch(l)).ToArray();
 
             var condensedLines = new List<string>();
             foreach (var line in lines)

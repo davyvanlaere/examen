@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FyKxzm9k2EWzzSVsDaFt6nENGIlFCHMltWPoxx1dg0JyR6aoYHsjYQ7QGkOHxbl8cNUZfW59zmtKx7xxwpzvLQ==",
+  "dgSpecHash": "W0Pifhx80gMO49F2utklZWiPFeigxe/EMshPFl5eTdCr1f0xxwHQuXhIIt2pP0Ys4DHZFk1qT/wPG1U8CT4ErA==",
   "success": true,
   "projectFilePath": "C:\\Git\\examen\\VragenLijstJson\\VragenLijstJson\\VragenLijstJson.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DLE\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\davyv\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
