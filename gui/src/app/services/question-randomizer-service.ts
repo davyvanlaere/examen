@@ -1,6 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { Injectable } from '@angular/core';
-import data from '../../assets/json/questions.json';
+import data from '../../assets/json/questions2022.json';
 import { QuestionInfo } from './question';
 
 @Injectable()
@@ -29,11 +29,11 @@ export class QuestionRandomizerService {
     private SaveRemainingListToStorage(selectionList: number[]) {
         console.log(selectionList.length);
         var serialised = JSON.stringify(selectionList);
-        localStorage.setItem('remaining', serialised);
+        localStorage.setItem('remaining2022', serialised);
     }
 
     private GetRemainingListFromStorage() : number[] {
-        let value = localStorage.getItem('remaining');
+        let value = localStorage.getItem('remaining2022');
         if (value) {
             return JSON.parse(value);
         }
